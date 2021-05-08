@@ -1,0 +1,36 @@
+<mainScreen>:
+    ten: ten
+    hund: hund
+    thou: thou
+    start: start
+    dropDown: dropDown
+
+    Spinner:
+        id: dropDown
+        text: "pick a sort"
+        values: ["quick sort", "bubble sort", "merge sort"]
+        on_text: root.clicked(dropDown.text)
+        pos: 0, root.height - self.height
+        size: root.width * 0.2, root.height * 0.1
+
+    Button:
+        id: ten
+        text: "10"
+        pos: root.width * 0.2, root.height - self.height
+        size: root.width * 0.2, root.height * 0.1
+    Button:
+        id: hund
+        text: "100"
+        pos: root.width * 0.4, root.height - self.height
+        size: root.width * 0.2, root.height * 0.1
+    Button:
+        id: thou
+        text: "1000"
+        pos: root.width * 0.6, root.height - self.height
+        size: root.width * 0.2, root.height * 0.1
+    Button:
+        id: start
+        text: "START"
+        pos: root.width * 0.8, root.height - self.height
+        size: root.width * 0.2, root.height * 0.1
+        on_press: root.startSort()
